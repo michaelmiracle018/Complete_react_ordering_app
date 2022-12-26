@@ -2,7 +2,7 @@
 
 ## SOME DEPENDENCIES USED
 1) React router dom
-## 
+## npm install react-router-dom@6
 2) React Slick 
 ## npm i react-slick
 
@@ -27,3 +27,6 @@
 9) React Paginate
 ## npm i react-paginate
 
+## TO BEGIN THE APP
+1) npm install -- To install all dependencies list above
+2) npm start -- To start on port
