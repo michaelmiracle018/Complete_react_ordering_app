@@ -20,7 +20,7 @@
 }
 
 .increase__decrease-btn {
-	background: #851e3e;
+	background: #df2020;
 	padding: 2px 5px;
 	border-radius: 5px;
 }
@@ -37,7 +37,7 @@
 
 .cart__item {
 	margin-bottom: 15px;
-	border-bottom: 1px solid #851e3e;
+	border-bottom: 1px solid #df2020;
 }
 
 @media only screen and (max-width: 576px) {

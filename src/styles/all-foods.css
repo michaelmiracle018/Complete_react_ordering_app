@@ -1,7 +1,7 @@
 .search__widget,
 .sorting__widget select {
 	padding: 7px 15px;
-	border: 1px solid #851e3e;
+	border: 1px solid #df2020;
 	border-radius: 5px;
 	cursor: pointer;
 }

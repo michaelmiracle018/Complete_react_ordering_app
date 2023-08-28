@@ -23,13 +23,13 @@
 
 .category span {
 	padding: 5px 10px;
-	background: #851e3e;
+	background: #df2020;
 	color: #212245;
 	border-radius: 5px;
 }
 
 .tabs {
-	border-bottom: 1px solid #851e3e;
+	border-bottom: 1px solid #df2020;
 }
 
 .tabs h6 {
@@ -52,7 +52,7 @@
 .form {
 	width: 60%;
 	margin: auto;
-	background: #851e3e;
+	background: #df2020;
 	padding: 20px;
 	border-radius: 5px;
 }

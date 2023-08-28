@@ -1,7 +1,8 @@
 .footer {
 	padding-top: 50px;
 	padding-bottom: 30px;
-	background: #851e3e;
+	background: #834848;
+	margin-bottom: -120px;
 }
 
 .footer__logo img {
@@ -13,7 +14,7 @@
 	font-weight: 600;
 	font-size: 1rem;
 	margin-bottom: 15px;
-  color: #fff;
+	color: #fff;
 }
 
 .footer__logo p {
@@ -42,7 +43,7 @@
 }
 
 .footer__text {
-  color: #fff;
+	color: #fff;
 }
 
 .newsletter {
@@ -53,13 +54,12 @@
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
-
 }
 .newsletter input {
 	background: transparent;
 	border: none;
 	outline: none;
-  color: #fff;
+	color: #fff;
 }
 
 .newsletter input:focus {
@@ -67,7 +67,7 @@
 }
 
 .follow {
-  color: #fff;
+	color: #fff;
 }
 
 .newsletter span {
@@ -93,7 +93,7 @@
 
 .copyright__text {
 	font-size: 0.8rem;
-	color: #df2020;
+	color: #fff;
 }
 
 @media only screen and (max-width: 992px) {

@@ -10,20 +10,20 @@ const totalAmount =
     ? JSON.parse(localStorage.getItem("totalAmount"))
     : 0;
 
-const totalQuantity =
-  localStorage.getItem("totalQuantity") !== null
-    ? JSON.parse(localStorage.getItem("totalQuantity"))
+const totalNumber =
+  localStorage.getItem("totalNumber") !== null
+    ? JSON.parse(localStorage.getItem("totalNumber"))
     : 0;
 
-const setItemFunc = (item, totalAmount, totalQuantity) => {
+const setItemFunc = (item, totalAmount, totalNumber) => {
   localStorage.setItem("cartItems", JSON.stringify(item));
   localStorage.setItem("totalAmount", JSON.stringify(totalAmount));
-  localStorage.setItem("totalQuantity", JSON.stringify(totalQuantity));
+  localStorage.setItem("totalNumber", JSON.stringify(totalNumber));
 };
 
 const initialState = {
   cartItems: items,
-  totalQuantity: totalQuantity,
+  totalNumber: totalNumber,
   totalAmount: totalAmount,
 };
 
@@ -38,10 +38,9 @@ const cartSlice = createSlice({
       const existingItem = state.cartItems.find(
         (item) => item.id === newItem.id
       );
-      state.totalQuantity++;
+      state.totalNumber++;
 
       if (!existingItem) {
-        // ===== note: if you use just redux you should not mute state array instead of clone the state array, but if you use redux toolkit that will not a problem because redux toolkit clone the array behind the scene
 
         state.cartItems.push({
           id: newItem.id,
@@ -66,7 +65,7 @@ const cartSlice = createSlice({
       setItemFunc(
         state.cartItems.map((item) => item),
         state.totalAmount,
-        state.totalQuantity
+        state.totalNumber
       );
     },
 
@@ -75,7 +74,7 @@ const cartSlice = createSlice({
     removeItem(state, action) {
       const id = action.payload;
       const existingItem = state.cartItems.find((item) => item.id === id);
-      state.totalQuantity--;
+      state.totalNumber--;
 
       if (existingItem.quantity === 1) {
         state.cartItems = state.cartItems.filter((item) => item.id !== id);
@@ -93,7 +92,7 @@ const cartSlice = createSlice({
       setItemFunc(
         state.cartItems.map((item) => item),
         state.totalAmount,
-        state.totalQuantity
+        state.totalNumber
       );
     },
 
@@ -105,7 +104,7 @@ const cartSlice = createSlice({
 
       if (existingItem) {
         state.cartItems = state.cartItems.filter((item) => item.id !== id);
-        state.totalQuantity = state.totalQuantity - existingItem.quantity;
+        state.totalNumber = state.totalNumber - existingItem.quantity;
       }
 
       state.totalAmount = state.cartItems.reduce(
@@ -115,7 +114,7 @@ const cartSlice = createSlice({
       setItemFunc(
         state.cartItems.map((item) => item),
         state.totalAmount,
-        state.totalQuantity
+        state.totalNumber
       );
     },
   },
